@@ -30,14 +30,24 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <24 23>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
             key-positions = <11 12>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <12 13>;
+        };
+
+        single_quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <24 25>;
         };
     };
 
