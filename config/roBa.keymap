@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
 &mt {
     flavor = "balanced";
     tapping-term-ms = <180>;
@@ -13,6 +14,20 @@
     tapping-term-ms = <180>;
     quick-tap-ms = <120>;
 };
+
+/*
+ * Keyball QK_KB_21/22/23/26/27/28 compatible gesture layers.
+ *
+ * MACRO1 layer:
+ *   Q -> KB21 Windows gesture
+ *   W -> KB22 Alt-Tab gesture
+ *   E -> KB23 Window gesture
+ *   R -> KB26 Volume gesture
+ *   T -> KB27 Arrow gesture
+ *   Y -> KB28 Browser-tab gesture
+ *
+ * Hold the key, then move the trackball.
+ */
 
 &trackball {
     automouse-layer = <1>;
@@ -27,6 +42,84 @@
             <&kp DOWN_ARROW>;
 
         tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    kb21_windows_gesture {
+        layers = <8>;
+        bindings =
+            <&kp LC(LG(RIGHT_ARROW))>, // Right: Virtual desktop right
+            <&kp LC(LG(LEFT_ARROW))>,  // Left: Virtual desktop left
+            <&kp LG(TAB)>,             // Up: Task view
+            <&kp LG(D)>;               // Down: Show desktop
+
+        tick = <210>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    kb22_alt_tab_gesture {
+        layers = <9>;
+        bindings =
+            <&kp LA(TAB)>,     // Right: Next app
+            <&kp LA(LS(TAB))>, // Left: Previous app
+            <&kp LA(TAB)>,     // Up: Alt+Tab
+            <&kp LA(F4)>;      // Down: Alt+F4
+
+        tick = <210>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    kb23_window_gesture {
+        layers = <10>;
+        bindings =
+            <&kp LG(RIGHT_ARROW)>, // Right: Snap right
+            <&kp LG(LEFT_ARROW)>,  // Left: Snap left
+            <&kp LG(UP_ARROW)>,    // Up: Maximize
+            <&kp LG(DOWN_ARROW)>;  // Down: Minimize / restore
+
+        tick = <210>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    kb26_volume_gesture {
+        layers = <11>;
+        bindings =
+            <&kp C_MUTE>,        // Right: Mute
+            <&kp C_MUTE>,        // Left: Mute
+            <&kp C_VOLUME_UP>,   // Up: Volume up
+            <&kp C_VOLUME_DOWN>; // Down: Volume down
+
+        tick = <210>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    kb27_arrow_gesture {
+        layers = <12>;
+        bindings =
+            <&kp RIGHT_ARROW>,
+            <&kp LEFT_ARROW>,
+            <&kp UP_ARROW>,
+            <&kp DOWN_ARROW>;
+
+        tick = <500>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
+    kb28_browser_tab_gesture {
+        layers = <13>;
+        bindings =
+            <&kp LC(TAB)>,     // Right: Next tab
+            <&kp LC(LS(TAB))>, // Left: Previous tab
+            <&kp LC(T)>,       // Up: New tab
+            <&kp LC(W)>;       // Down: Close tab
+
+        tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
     };
@@ -177,7 +270,7 @@
 
         MACRO1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&mo 8   &mo 9   &mo 10  &mo 11  &mo 12                     &mo 13  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
@@ -199,6 +292,60 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        KB21 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        KB22 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        KB23 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        KB26 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        KB27 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        KB28 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
