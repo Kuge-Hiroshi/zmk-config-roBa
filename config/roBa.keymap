@@ -106,7 +106,6 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -114,7 +113,7 @@
             bindings = <
 &kp Q       &kp W         &kp E    &kp R                 &kp T                                               &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &lt 4 A     &kp S         &kp D    &kp F                 &kp G      &kp LS(LG(S))             &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 7 MINUS
-&lt 5 Z     &kp X         &kp C    &kp V                 &kp B      &kp COLON                 &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
+&lt 5 Z     &kp X         &kp C    &kp V                 &kp B      &kp COLON                 &kp SEMI       &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
 &kp ESCAPE  &kp LEFT_ALT  &kp TAB  &mt LEFT_SHIFT LANG2  &kp SPACE  &mt LCTRL LANGUAGE_1      &kp BACKSPACE  &lt 1 ENTER                             &kp RIGHT_WIN
             >;
 
