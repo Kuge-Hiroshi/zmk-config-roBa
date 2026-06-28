@@ -50,11 +50,11 @@
         layers = <8>;
         bindings =
             <&kp LC(LG(RIGHT_ARROW))>,
-            // Right: Virtual desktop right,,
+            // Right: Virtual desktop right,,,
             <&kp LC(LG(LEFT_ARROW))>,
-            // Left: Virtual desktop left,,
+            // Left: Virtual desktop left,,,
             <&kp LG(TAB)>,
-            // Up: Task view,,
+            // Up: Task view,,,
             <&kp LG(D)>;
 
         // Down: Show desktop
@@ -68,11 +68,11 @@
         layers = <9>;
         bindings =
             <&kp LA(TAB)>,
-            // Right: Next app,,
+            // Right: Next app,,,
             <&kp LA(LS(TAB))>,
-            // Left: Previous app,,
+            // Left: Previous app,,,
             <&kp LA(TAB)>,
-            // Up: Alt+Tab,,
+            // Up: Alt+Tab,,,
             <&kp LA(F4)>;
 
         // Down: Alt+F4
@@ -86,11 +86,11 @@
         layers = <10>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // Right: Snap right,,
+            // Right: Snap right,,,
             <&kp LG(LEFT_ARROW)>,
-            // Left: Snap left,,
+            // Left: Snap left,,,
             <&kp LG(UP_ARROW)>,
-            // Up: Maximize,,
+            // Up: Maximize,,,
             <&kp LG(DOWN_ARROW)>;
 
         // Down: Minimize / restore
@@ -104,11 +104,11 @@
         layers = <11>;
         bindings =
             <&kp C_MUTE>,
-            // Right: Mute,,
+            // Right: Mute,,,
             <&kp C_MUTE>,
-            // Left: Mute,,
+            // Left: Mute,,,
             <&kp C_VOLUME_UP>,
-            // Up: Volume up,,
+            // Up: Volume up,,,
             <&kp C_VOLUME_DOWN>;
 
         // Down: Volume down
@@ -135,11 +135,11 @@
         layers = <13>;
         bindings =
             <&kp LC(TAB)>,
-            // Right: Next tab,,
+            // Right: Next tab,,,
             <&kp LC(LS(TAB))>,
-            // Left: Previous tab,,
+            // Left: Previous tab,,,
             <&kp LC(T)>,
-            // Up: New tab,,
+            // Up: New tab,,,
             <&kp LC(W)>;
 
         // Down: Close tab
@@ -277,7 +277,7 @@
             bindings = <
 &kp F11  &kp F12  &kp F13  &kp F14         &kp F15                                &trans  &trans     &trans  &trans  &trans
 &kp F6   &kp F7   &kp F8   &kp F9          &kp F10    &trans              &trans  &trans  &kp LCTRL  &trans  &trans  &trans
-&kp F1   &kp F2   &kp F3   &kp F4          &kp F5     &trans              &trans  &trans  &trans     &trans  &trans  &trans
+&kp F1   &kp F2   &kp F3   &kp F4          &kp F5     &trans              &trans  &trans  &mo 9      &mo 13  &mo 11  &trans
 &trans   &trans   &trans   &kp LANGUAGE_2  &kp SPACE  &kp LANGUAGE_1      &trans  &trans                             &trans
             >;
 
@@ -304,10 +304,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans        &trans     &trans          &trans                      &trans  &trans    &mkp MB4  &mkp MB5  &trans
+&trans  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans        &trans     &trans          &trans  &trans      &trans  &trans  &mo 4     &mo 10    &mo 8     &trans
+&trans  &trans        &trans     &trans          &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
