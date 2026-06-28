@@ -1,8 +1,7 @@
-#include <behaviors.dtsi>
+include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &mt {
     flavor = "balanced";
@@ -32,7 +31,6 @@
 
 &trackball {
     automouse-layer = <1>;
-    input-processors = <&zip_temp_layer 1 300>;
     scroll-layers = <3>;
 
     arrows {
@@ -143,17 +141,6 @@
 };
 
 / {
-    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-
-        /*
-         * Mouse button position is excluded from temporary mouse layer deactivation.
-         * Position 18 is &mkp MB1 in the AML layer.
-         */
-        excluded-positions = <18>;
-    };
-
     combos {
         compatible = "zmk,combos";
         timeout-ms = <85>;
