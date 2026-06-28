@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-
 &mt {
     flavor = "balanced";
     tapping-term-ms = <180>;
@@ -40,7 +39,7 @@
 
         parentheses {
             bindings = <&paren_pair>;
-            key-positions = <20 21>; // K + L
+            key-positions = <20 19>; // K + L
         };
 
         square_brackets {
@@ -50,7 +49,7 @@
 
         curly_brackets {
             bindings = <&brace_pair>;
-            key-positions = <32 33>; // , + .
+            key-positions = <32 31>; // , + .
         };
 
         hash_tag {
@@ -60,12 +59,12 @@
 
         at_mark {
             bindings = <&kp LS(N2)>; // @
-            key-positions = <19 20>; // J + K
+            key-positions = <19 18>; // J + K
         };
 
         exclamation {
             bindings = <&kp LS(N1)>; // !
-            key-positions = <31 32>; // M + ,
+            key-positions = <31 30>; // M + ,
         };
 
         semicolon {
@@ -92,25 +91,35 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <2 1>; // E + W
         };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <0 1>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <8 9>;
+        };
     };
 
     macros {
         paren_pair: paren_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N9)>, <&kp LS(N0)>;
+            bindings = <&kp LS(N9) &kp LS(N0)>;
         };
 
         bracket_pair: bracket_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET>;
         };
 
         brace_pair: brace_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(RIGHT_BRACKET)>;
+            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET)>;
         };
     };
 
