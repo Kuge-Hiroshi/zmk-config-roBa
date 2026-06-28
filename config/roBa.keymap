@@ -9,11 +9,11 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+    automouse-layer = <1>;
+    scroll-layers = <3>;
 
     arrows {
-        layers = <3>;
+        layers = <2>;
         bindings =
             <&kp RIGHT_ARROW>,
             <&kp LEFT_ARROW>,
@@ -30,35 +30,82 @@
     combos {
         compatible = "zmk,combos";
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <24 23>;
+        parentheses {
+            bindings = <&paren_pair>;
+            key-positions = <20 21>; // K + L
+        };
+
+        square_brackets {
+            bindings = <&bracket_pair>;
+            key-positions = <7 8>; // I + O
+        };
+
+        curly_brackets {
+            bindings = <&brace_pair>;
+            key-positions = <32 33>; // , + .
+        };
+
+        hash_tag {
+            bindings = <&kp LS(N3)>; // #
+            key-positions = <7 6>; // I + U
+        };
+
+        at_mark {
+            bindings = <&kp LS(N2)>; // @
+            key-positions = <19 20>; // J + K
+        };
+
+        exclamation {
+            bindings = <&kp LS(N1)>; // !
+            key-positions = <31 32>; // M + ,
         };
 
         semicolon {
             bindings = <&kp SEMICOLON>;
-            key-positions = <11 12>;
+            key-positions = <11 12>; // S + D
         };
 
         colon {
             bindings = <&kp COLON>;
-            key-positions = <12 13>;
+            key-positions = <12 13>; // D + F
         };
 
         single_quote {
             bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <24 25>;
+            key-positions = <24 25>; // C + V
+        };
+
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <24 23>; // C + X
+        };
+
+        yen_mark {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <2 1>; // E + W
         };
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+        paren_pair: paren_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>, <&kp LS(N0)>;
+        };
+
+        bracket_pair: bracket_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+
+        brace_pair: brace_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(RIGHT_BRACKET)>;
         };
     };
+};
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
