@@ -5,7 +5,14 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <0>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <120>;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <180>;
+    quick-tap-ms = <120>;
 };
 
 &trackball {
@@ -29,6 +36,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+        timeout-ms = <85>;
 
         parentheses {
             bindings = <&paren_pair>;
