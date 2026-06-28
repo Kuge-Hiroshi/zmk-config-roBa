@@ -49,11 +49,14 @@
     kb21_windows_gesture {
         layers = <8>;
         bindings =
-            <&kp LC(LG(RIGHT_ARROW))>, // Right: Virtual desktop right
-            <&kp LC(LG(LEFT_ARROW))>,  // Left: Virtual desktop left
-            <&kp LG(TAB)>,             // Up: Task view
-            <&kp LG(D)>;               // Down: Show desktop
-
+            <&kp LC(LG(RIGHT_ARROW))>,
+            // Right: Virtual desktop right,
+            <&kp LC(LG(LEFT_ARROW))>,
+            // Left: Virtual desktop left,
+            <&kp LG(TAB)>,
+            // Up: Task view,
+            <&kp LG(D)>;
+               // Down: Show desktop
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -62,11 +65,14 @@
     kb22_alt_tab_gesture {
         layers = <9>;
         bindings =
-            <&kp LA(TAB)>,     // Right: Next app
-            <&kp LA(LS(TAB))>, // Left: Previous app
-            <&kp LA(TAB)>,     // Up: Alt+Tab
-            <&kp LA(F4)>;      // Down: Alt+F4
-
+            <&kp LA(TAB)>,
+            // Right: Next app,
+            <&kp LA(LS(TAB))>,
+            // Left: Previous app,
+            <&kp LA(TAB)>,
+            // Up: Alt+Tab,
+            <&kp LA(F4)>;
+      // Down: Alt+F4
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -75,11 +81,14 @@
     kb23_window_gesture {
         layers = <10>;
         bindings =
-            <&kp LG(RIGHT_ARROW)>, // Right: Snap right
-            <&kp LG(LEFT_ARROW)>,  // Left: Snap left
-            <&kp LG(UP_ARROW)>,    // Up: Maximize
-            <&kp LG(DOWN_ARROW)>;  // Down: Minimize / restore
-
+            <&kp LG(RIGHT_ARROW)>,
+            // Right: Snap right,
+            <&kp LG(LEFT_ARROW)>,
+            // Left: Snap left,
+            <&kp LG(UP_ARROW)>,
+            // Up: Maximize,
+            <&kp LG(DOWN_ARROW)>;
+  // Down: Minimize / restore
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -88,11 +97,14 @@
     kb26_volume_gesture {
         layers = <11>;
         bindings =
-            <&kp C_MUTE>,        // Right: Mute
-            <&kp C_MUTE>,        // Left: Mute
-            <&kp C_VOLUME_UP>,   // Up: Volume up
-            <&kp C_VOLUME_DOWN>; // Down: Volume down
-
+            <&kp C_MUTE>,
+            // Right: Mute,
+            <&kp C_MUTE>,
+            // Left: Mute,
+            <&kp C_VOLUME_UP>,
+            // Up: Volume up,
+            <&kp C_VOLUME_DOWN>;
+ // Down: Volume down
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -114,11 +126,14 @@
     kb28_browser_tab_gesture {
         layers = <13>;
         bindings =
-            <&kp LC(TAB)>,     // Right: Next tab
-            <&kp LC(LS(TAB))>, // Left: Previous tab
-            <&kp LC(T)>,       // Up: New tab
-            <&kp LC(W)>;       // Down: Close tab
-
+            <&kp LC(TAB)>,
+            // Right: Next tab,
+            <&kp LC(LS(TAB))>,
+            // Left: Previous tab,
+            <&kp LC(T)>,
+            // Up: New tab,
+            <&kp LC(W)>;
+       // Down: Close tab
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -270,14 +285,14 @@
 
         MACRO1 {
             bindings = <
-&mo 8   &mo 9   &mo 10  &mo 11  &mo 12                     &mo 13  &trans  &trans  &trans  &trans
+&mo 8   &mo 9   &mo 10  &mo 11  &mo 12                      &mo 13  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
-        layer_7 {
+        mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -295,7 +310,7 @@
             >;
         };
 
-        KB21 {
+        desktop_ctrl {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -304,7 +319,7 @@
             >;
         };
 
-        KB22 {
+        app_ctrl {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -313,7 +328,7 @@
             >;
         };
 
-        KB23 {
+        window_ctrl {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -322,7 +337,7 @@
             >;
         };
 
-        KB26 {
+        volume_ctrl {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -331,7 +346,7 @@
             >;
         };
 
-        KB27 {
+        arrow {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -340,7 +355,7 @@
             >;
         };
 
-        KB28 {
+        tab_ie {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
