@@ -61,7 +61,7 @@
         };
 
         semicolon {
-            bindings = <&kp SEMICOLON>;
+            bindings = <&kp SEMI>;
             key-positions = <11 12>; // S + D
         };
 
@@ -71,12 +71,12 @@
         };
 
         single_quote {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&kp SQT>;
             key-positions = <24 25>; // C + V
         };
 
         double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp LS(SQT)>; // "
             key-positions = <24 23>; // C + X
         };
 
