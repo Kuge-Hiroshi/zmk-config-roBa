@@ -50,13 +50,15 @@
         layers = <8>;
         bindings =
             <&kp LC(LG(RIGHT_ARROW))>,
-            // Right: Virtual desktop right,
+            // Right: Virtual desktop right,,
             <&kp LC(LG(LEFT_ARROW))>,
-            // Left: Virtual desktop left,
+            // Left: Virtual desktop left,,
             <&kp LG(TAB)>,
-            // Up: Task view,
+            // Up: Task view,,
             <&kp LG(D)>;
-               // Down: Show desktop
+
+        // Down: Show desktop
+
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -66,13 +68,15 @@
         layers = <9>;
         bindings =
             <&kp LA(TAB)>,
-            // Right: Next app,
+            // Right: Next app,,
             <&kp LA(LS(TAB))>,
-            // Left: Previous app,
+            // Left: Previous app,,
             <&kp LA(TAB)>,
-            // Up: Alt+Tab,
+            // Up: Alt+Tab,,
             <&kp LA(F4)>;
-      // Down: Alt+F4
+
+        // Down: Alt+F4
+
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -82,13 +86,15 @@
         layers = <10>;
         bindings =
             <&kp LG(RIGHT_ARROW)>,
-            // Right: Snap right,
+            // Right: Snap right,,
             <&kp LG(LEFT_ARROW)>,
-            // Left: Snap left,
+            // Left: Snap left,,
             <&kp LG(UP_ARROW)>,
-            // Up: Maximize,
+            // Up: Maximize,,
             <&kp LG(DOWN_ARROW)>;
-  // Down: Minimize / restore
+
+        // Down: Minimize / restore
+
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -98,13 +104,15 @@
         layers = <11>;
         bindings =
             <&kp C_MUTE>,
-            // Right: Mute,
+            // Right: Mute,,
             <&kp C_MUTE>,
-            // Left: Mute,
+            // Left: Mute,,
             <&kp C_VOLUME_UP>,
-            // Up: Volume up,
+            // Up: Volume up,,
             <&kp C_VOLUME_DOWN>;
- // Down: Volume down
+
+        // Down: Volume down
+
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -127,13 +135,15 @@
         layers = <13>;
         bindings =
             <&kp LC(TAB)>,
-            // Right: Next tab,
+            // Right: Next tab,,
             <&kp LC(LS(TAB))>,
-            // Left: Previous tab,
+            // Left: Previous tab,,
             <&kp LC(T)>,
-            // Up: New tab,
+            // Up: New tab,,
             <&kp LC(W)>;
-       // Down: Close tab
+
+        // Down: Close tab
+
         tick = <210>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -237,7 +247,7 @@
         default_layer {
             bindings = <
 &kp Q       &kp W         &kp E    &kp R                 &kp T                                               &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&lt 4 A     &kp S         &kp D    &kp F                 &kp G      &kp LS(LG(S))             &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 7 MINUS
+&lt 4 A     &kp S         &kp D    &kp F                 &kp G      &kp LS(LG(S))             &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 6 MINUS
 &lt 5 Z     &kp X         &kp C    &kp V                 &kp B      &kp COLON                 &kp SEMI       &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
 &kp ESCAPE  &kp LEFT_ALT  &kp TAB  &mt LEFT_SHIFT LANG2  &kp SPACE  &mt LCTRL LANGUAGE_1      &kp BACKSPACE  &lt 2 ENTER                             &kp RIGHT_WIN
             >;
